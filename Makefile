@@ -1,0 +1,57 @@
+# Makefile do MachineM
+#
+#
+
+# DEFINIÇÕES PARA COMPILAÇÃO #################
+COMPILER 		= gcc
+CFLAG 			= -c
+LFLAG 			= -o
+LIBFLAG 		=
+
+
+IMAIN_SRC = src/imain.c
+IMAIN_OBJ = obj/imain.o
+
+
+# BINÁRIO DO MACHINEM ###########################
+MACHINEM_OUTPUT_NAME_EXEC		= MachineM
+MACHINEM_OUTPUT_FULLPATH_EXEC	= bin/$(MACHINEM_OUTPUT_NAME_EXEC)
+
+ASSEMBLERM_OUTPUT_NAME_EXEC		= AssemblerM
+ASSEMBLERM_OUTPUT_FULLPATH_EXEC	= \
+	$(ASSEMBLERM_OUTPUT_NAME_EXEC)/bin/$(ASSEMBLERM_OUTPUT_NAME_EXEC)
+
+CPUM_OUTPUT_NAME_EXEC			= CPUM
+CPUM_OUTPUT_FULLPATH_EXEC		= \
+	$(CPUM_OUTPUT_NAME_EXEC)/bin/$(CPUM_OUTPUT_NAME_EXEC)
+
+
+BIN = $(MACHINEM_OUTPUT_FULLPATH_EXEC)
+OBJ = $(IMAIN_OBJ)
+
+
+all: mk_dir ASSEMBLERM_MAKE CPUM_MAKE $(BIN) LN_SYMBOL_MACHINEM
+
+mk_dir:
+	mkdir -p bin obj
+
+ASSEMBLERM_MAKE:
+	cd AssemblerM && make
+
+CPUM_MAKE:
+	cd CPUM && make
+
+LN_SYMBOL_MACHINEM:
+	rm -f $(MACHINEM_OUTPUT_NAME_EXEC)
+	ln -s $(MACHINEM_OUTPUT_FULLPATH_EXEC)
+
+$(IMAIN_OBJ): $(IMAIN_SRC)
+	gcc -c $(IMAIN_SRC) -o $(IMAIN_OBJ)
+
+$(BIN): $(OBJ)
+	$(COMPILER) $(LFLAG) $(BIN) $(OBJ) $(LIBFLAG)
+
+clean:
+	cd AssemblerM && make clean
+	cd CPUM && make clean
+	rm -f *~ *.swp *.swo $(MACHINEM_OUTPUT_FULLPATH_EXEC) $(MACHINEM_OUTPUT_NAME_EXEC) $(OBJ)
