@@ -10,6 +10,29 @@ Realiza a simulação da Máquina de Registradores, por meio de duas tarefas pri
   2. Após a execução do binário montado para a CPUM, há a geração da função computada em um arquivo
      de texto.
 
+##Requisitos de compilação
+* Sistema Operacional Unix-like ou GNU/Linux mais recente;
+* GCC 4.9.1 ou superior;
+* GNU Make 4.0 ou superior.
+
+**Requisito opcional**
+* Qt Creator 5.3.0 ou superior.
+
+##Estrutura do projeto
+
+A seguir, está disposto a organização básica do projeto MachineM.
+
+	/MachineM				: pasta-pai do projeto	
+		/AssemblerM			: pasta do montador AssemblerM
+		/CPUM				: pasta da CPU conceitual, a CPUM
+		/src				: pasta de códigos-fonte
+		.gitmodules			: arquivo git de referência aos módulos (outros projetos) incluídos neste projeto
+		MachineM.pro 	    : árvore do projeto (Qt Creator)
+		Makefile			: arquivo Makefile
+		README.md			: arquivo LEIA-ME
+
+> Obs.: como cortesia da casa, é oferecido um layout simples do projeto para o Qt Creator.
+
 ##Procedimento de compilação do MachineM (via Terminal)
 Estando-se na pasta pai do projeto ("/MachineM"), realize o comando abaixo:
 
