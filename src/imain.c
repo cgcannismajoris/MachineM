@@ -58,18 +58,30 @@ int main(int argc, char **argv)
 		printf("Linha de comando inválida. Invoque o programa sem argumentos para mais informações.");
 		return (EXIT_FAILURE);
 	}
-	
+		
 	//Realiza a montagem do código	
+	printf("Montando programa...\n");
 	if(call_assembler(argc, argv) != EXIT_SUCCESS)
 	{
-		printf("Não é possível continuar.\n");
+		//Apaga o arquivo binário que foi executado pela CPU
+		remove(CPU_INPUT_FILE);
+		
+		//Exibe o erro	
+		printf("MachineM: Não é possível continuar.\n");
+
 		return (EXIT_FAILURE);
 	}
-	
+
 	//Executa o código
+	printf("\nExecutando programa...\n");	
 	if(call_cpu(argv[2]) != EXIT_SUCCESS)
 	{
-		printf("Erro na execução do programa.\n");
+		//Apaga o arquivo binário que foi executado pela CPU
+		remove(CPU_INPUT_FILE);
+	
+		//Exibe o erro
+		printf("MachineM: Erro na execução do programa.\n");
+
 		return (EXIT_FAILURE);
 	}
 
@@ -111,7 +123,7 @@ int call_assembler(int argc, char **argv)
 
 	//Necessário para call_program(...)
 	argvAssembler[argcAssembler-1] = NULL;
-
+	
 	return (call_program(argvAssembler[0], argvAssembler));
 }
 
