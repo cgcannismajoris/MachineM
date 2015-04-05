@@ -42,20 +42,27 @@ int main(int argc, char **argv)
 	if(argc == 1)
 	{
 		printf("\nMachineM\n");
-		printf("Copyright (C) 2015 Cristian Costa Mello and Gustavo Freitas de Amorim\n\n");
+		printf("Copyright (C) 2015 Cristian Costa Mello and Gustavo \
+Freitas de Amorim\n\n");
 		printf("Linha de Comando:\n");
-		printf("MachineM <NOME_DO_ARQUIVO_DE_ENTRADA> <NOME_DO_ARQUIVO_DE_SAIDA> <arg1> <arg2> ... <argn>\n\n");
+		printf("MachineM <NOME_DO_ARQUIVO_DE_ENTRADA> \
+<NOME_DO_ARQUIVO_DE_SAIDA> <arg1> <arg2> ... <argn>\n\n");
 		printf("Descrição dos Argumentos:\n");
-		printf("   <NOME_DO_ARQUIVO_DE_ENTRADA> : é um arquivo de texto codificado no padrão ANSI ASCII;\n");
-		printf("   <NOME_DO_ARQUIVO_DE_SAIDA>   : é um arquivo de texto contendo a função computada;\n");
-		printf("   <arg1> <arg2> ... <argn>     : os valores numéricos 	naturais inteiros para configurar os valores iniciais\n");
-		printf("                                  dos registradores de entrada declarados no cabeçalho do arquivo de texto\n");
+		printf("   <NOME_DO_ARQUIVO_DE_ENTRADA> : é um arquivo de \
+texto codificado no padrão ANSI ASCII;\n");
+		printf("   <NOME_DO_ARQUIVO_DE_SAIDA>   : é um arquivo de texto \
+contendo a função computada;\n");
+		printf("   <arg1> <arg2> ... <argn>     : os valores numéricos 	\
+naturais inteiros para configurar os valores iniciais\n");
+		printf("                                  dos registradores de \
+entrada declarados no cabeçalho do arquivo de texto\n");
 		printf("                                  de entrada.\n\n");
 		return (EXIT_SUCCESS);
 	}
 	else if(argc < 4)
 	{
-		printf("Linha de comando inválida. Invoque o programa sem argumentos para mais informações.");
+		printf("Linha de comando inválida. Invoque o programa sem argumentos \
+para mais informações.");
 		return (EXIT_FAILURE);
 	}
 		
@@ -67,7 +74,7 @@ int main(int argc, char **argv)
 		remove(CPU_INPUT_FILE);
 		
 		//Exibe o erro	
-		printf("MachineM: Não é possível continuar.\n");
+		printf("MACHINEM: Não é possível continuar.\n");
 
 		return (EXIT_FAILURE);
 	}
@@ -80,7 +87,7 @@ int main(int argc, char **argv)
 		remove(CPU_INPUT_FILE);
 	
 		//Exibe o erro
-		printf("MachineM: Erro na execução do programa.\n");
+		printf("MACHINEM: Erro na execução do programa.\n");
 
 		return (EXIT_FAILURE);
 	}
