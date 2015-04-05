@@ -168,5 +168,16 @@ se o teste "zero b" resultar em verdade, o programa será finalizado.
 Como boa prática de programação, recomenda-se seguir um único padrão de escrita, visando uma maior facilidade de 
 entendimento humano do código.
 
+##Diagrama do Projeto
+Abaixo é mostrado os diagramas de classes (adaptado) dos módulos do MachineM.
+
+####1. AssemblerM:
+![alt text][DiagramaMontador]
+[DiagramaMontador]:https://raw.githubusercontent.com/cgcannismajoris/AssemblerM/alternative/Diagrama%20-%20Montador.png "Diagrama do Montador"
+
+####2. CPUM:
+![alt text][DiagramaCPU]
+[DiagramaCPU]:https://raw.githubusercontent.com/cgcannismajoris/CPUM/alternative/Diagrama%20-%20CPU.png "Diagrama da CPU"
+
 ##Licença
 O MachineM é amparado pela licença [GNU General Public License V3.0](https://www.gnu.org/licenses/gpl.txt).
