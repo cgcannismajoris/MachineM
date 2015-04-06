@@ -62,7 +62,7 @@ entrada declarados no cabeçalho do arquivo de texto\n");
 	else if(argc < 4)
 	{
 		printf("Linha de comando inválida. Invoque o programa sem argumentos \
-para mais informações.");
+para mais informações.\n");
 		return (EXIT_FAILURE);
 	}
 		
