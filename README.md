@@ -30,8 +30,6 @@ A seguir, está disposto a organização básica do projeto MachineM.
 		/CPUM				: pasta da CPU conceitual, a CPUM
 		/src				: pasta de códigos-fonte
 		COPYING3			: arquivo de licença
-		.gitmodules			: arquivo git de referência aos módulos (outros projetos)
-						      incluídos neste projeto
 		MachineM.pro 	    : árvore do projeto (Qt Creator)
 		Makefile			: arquivo Makefile
 		README.md			: arquivo LEIA-ME
