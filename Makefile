@@ -52,6 +52,7 @@ OBJ = $(IMAIN_OBJ)
 
 
 all: mk_dir ASSEMBLERM_MAKE CPUM_MAKE $(BIN) LN_SYMBOL_MACHINEM
+	@echo "Sucesso na compilação do MachineM."
 
 mk_dir:
 	mkdir -p bin obj
@@ -76,3 +77,4 @@ clean:
 	cd AssemblerM && make clean
 	cd CPUM && make clean
 	rm -f *~ *.swp *.swo $(MACHINEM_OUTPUT_FULLPATH_EXEC) $(MACHINEM_OUTPUT_NAME_EXEC) $(OBJ)
+	@echo "MachineM foi limpo."

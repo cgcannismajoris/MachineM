@@ -28,6 +28,7 @@ A seguir, está disposto a organização básica do projeto MachineM.
 	/MachineM				: pasta-pai do projeto	
 		/AssemblerM			: pasta do montador AssemblerM
 		/CPUM				: pasta da CPU conceitual, a CPUM
+		/doc				: pasta da documentação do projeto
 		/src				: pasta de códigos-fonte
 		COPYING3			: arquivo de licença
 		MachineM.pro 	    : árvore do projeto (Qt Creator)
