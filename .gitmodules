@@ -1,6 +1,0 @@
-[submodule "CPUM"]
-	path = CPUM
-	url = git@github.com:cgcannismajoris/CPUM.git
-[submodule "AssemblerM"]
-	path = AssemblerM
-	url = git@github.com:cgcannismajoris/AssemblerM.git
