@@ -21,7 +21,6 @@ A seguir, está disposto a organização básica do projeto AssemblerM.
 		/data					: arquivos de entrada/saída e relativos ao projeto
 		/src					: pasta de códigos-fonte
 		/tools					: pasta de ferramentas
-		.gitignore				: arquivo gitignore
 		AssemblerM.pro			: árvore do projeto (Qt Creator)
 		AssemblerM.pro.user		: estruturação do projeto (Qt Creator)
 		COPYING3				: arquivo de licença
