@@ -180,7 +180,7 @@ r3: se zero b entao r5 senao r1 ; Se b for zero, então finaliza. Caso contrári
 ##Arquivo de Saída (Função Computada)
 O arquivo de saída é função computada do programa. Cada linha do arquivo conterá a configuração:
 
-(<NÚMERO_DA_PRÓXIMA_INSTRUÇÃO>, (<VALOR_REG1>, <VALOR_REG2>, ..., <VALOR_REG_N>))
+	(<NÚMERO_DA_PRÓXIMA_INSTRUÇÃO>, (<VALOR_REG1>, <VALOR_REG2>, ..., <VALOR_REG_N>))
 
 A ordem dos registradores é a mesma ordem da declaração da máquina realizada no código.
 
