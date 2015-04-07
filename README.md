@@ -7,7 +7,7 @@ Realiza a simulação da Máquina de Registradores, por meio de duas tarefas pri
   1. A partir de um arquivo de texto de entrada, escrito em Linguagem M, monta-se, por meio do AssemblerM,
      o binário compatível com a CPUM, uma componente executora;
   
-  2. Após a execução do binário montado para a CPUM, há a geração da função computada em um arquivo
+  2. Após a execução do binário montado para a CPUM, há a geração da computação em um arquivo
      de texto.
 
      
@@ -53,13 +53,13 @@ Descrição dos argumentos:
 
 	<NOME_DO_ARQUIVO_DE_ENTRADA> : é um arquivo de texto codificado no padrão ANSI ASCII;
 	
-	<NOME_DO_ARQUIVO_DE_SAIDA>   : é um arquivo de texto contendo a função computada;
+	<NOME_DO_ARQUIVO_DE_SAIDA>   : é um arquivo de texto contendo a computação;
 	
 	<arg1> <arg2> ... <argn>     : os valores numéricos naturais para configurar os valores
 	                               iniciais dos registradores de entrada declarados no
 	                               cabeçalho do arquivo de texto de entrada.
 
-Se a execução for bem-sucedida, então será gerado o arquivo de texto contendo a função computada, a rigor de análise.
+Se a execução for bem-sucedida, então será gerado o arquivo de texto contendo a computação, a rigor de análise.
 
 ##Sintaxe da linguagem M
 A sintaxe da linguagem é semelhante às linguagens conceituais monolíticas.
@@ -178,8 +178,8 @@ r2: faca dec b va_para r3	; Decrementa o registrador b e vai para r3
 r3: se zero b entao r5 senao r1 ; Se b for zero, então finaliza. Caso contrário, volta para r1
 ```
 
-##Arquivo de Saída (Função Computada)
-O arquivo de saída é função computada do programa. Cada linha do arquivo conterá a configuração:
+##Arquivo de Saída (Computação)
+O arquivo de saída é computação do programa. Cada linha do arquivo conterá a configuração:
 
 	(<NÚMERO_DA_PRÓXIMA_INSTRUÇÃO>, (<VALOR_REG1>, <VALOR_REG2>, ..., <VALOR_REG_N>))
 
@@ -197,9 +197,9 @@ r3: se zero b entao r5 senao r1
 
 Se executarmos o código acima com a seguinte linha comando:
 
-	./MachineM codigo.txt funcaoComputada.txt 3
+	./MachineM codigo.txt comput.txt 3
 
-O arquivo funcaoComputada.txt conterá:
+O arquivo comput.txt conterá:
 ```
 (1, (0, 3))
 (2, (1, 3))
