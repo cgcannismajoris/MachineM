@@ -170,8 +170,8 @@ r2: faca dec b va_para r3	; Decrementa o registrador b e vai para r3
 r3: se zero b entao r5 senao r1 ; Se b for zero, então finaliza. Caso contrário, volta para r1
 ```
 
-##Arquivo de Saída (Função Computada)
-O arquivo de saída é função computada do programa. Cada linha do arquivo conterá a configuração:
+##Arquivo de Saída (Computação)
+O arquivo de saída é a computação do programa. Cada linha do arquivo conterá a configuração:
 
 (<NÚMERO_DA_PRÓXIMA_INSTRUÇÃO>, (<VALOR_REG1>, <VALOR_REG2>, ..., <VALOR_REG_N>))
 
@@ -189,9 +189,9 @@ r3: se zero b entao r5 senao r1
 
 Se executarmos o código acima com a seguinte linha comando:
 
-	./MachineM codigo.txt funcaoComputada.txt 3
+	./MachineM codigo.txt computacao.txt 3
 
-O arquivo funcaoComputada.txt conterá:
+O arquivo computacao.txt conterá:
 ```
 (1, (0, 3))
 (2, (1, 3))
