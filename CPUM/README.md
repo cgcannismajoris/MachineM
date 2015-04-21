@@ -3,7 +3,7 @@ Uma implementação do processador conceitual M, que realiza a simulação de um
 
 ##O que ela faz?
 Realiza a abertura de um arquivo binário compatível com a CPUM. Em seguida, é feita a execução das instruções
-e a geração da função computada, disposta num arquivo de texto.
+e a geração da computação, disposta num arquivo de texto.
 
 ##Requisitos recomendados
 * Sistema Operacional Unix-like ou GNU/Linux mais recente;
@@ -43,7 +43,7 @@ Através de um terminal de comando do Linux, observa-se o formato de entrada aba
 	  <NOME_DO_ARQUIVO_DE_ENTRADA> : é o arquivo binário compatível com a CPUM;
 	  <NOME_DO_ARQUIVO_DE_SAIDA>   : é o arquivo de texto de saída.
 
-Se a execução for bem-sucedida, então será gerado um arquivo de texto contendo a função computada.
+Se a execução for bem-sucedida, então será gerado um arquivo de texto contendo a computação.
 
 ##Diagrama do Projeto
 Abaixo é mostrado o diagrama de classes (adaptado) do projeto.
