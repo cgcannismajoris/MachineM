@@ -31,7 +31,7 @@ A seguir, está disposto a organização básica do projeto MachineM.
 	/doc				: pasta da documentação do projeto
 	/src				: pasta de códigos-fonte
 	COPYING3			: arquivo de licença
-	MachineM.pro 	    : árvore do projeto (Qt Creator)
+	MachineM.pro 	    		: árvore do projeto (Qt Creator)
 	Makefile			: arquivo Makefile
 	README.md			: arquivo LEIA-ME
 ```
@@ -59,7 +59,7 @@ Descrição dos argumentos:
 
 <arg1> <arg2> ... <argn>     : os valores numéricos naturais para configurar os valores
 			       iniciais dos registradores de entrada declarados no
-	                               cabeçalho do arquivo de texto de entrada.
+	                       cabeçalho do arquivo de texto de entrada.
 ```
 
 Se a execução for bem-sucedida, então será gerado o arquivo de texto contendo a computação, a rigor de análise.
@@ -77,14 +77,17 @@ Todo código-fonte deve ter, em seu cabeçalho (primeira linha), a declaração 
 Significado:
 
 ```
-	<NOME_DA_MÁQUINA>                    : é o nome da máquina;
-	<OUTREG_1>,<OUTREG_2>,...,<OUTREG_N> : é a declaração dos registradores de saída;
-	<-                                   : seta que determina o significado dos 
-										   registradores (será tratada a seguir);
-	<INREG_1>,<INREG_2>,...,<INREG_N>    : é a declaração dos registradores de entrada. É 
-									       esta lista de registradores que receberá os
-									       valores numéricos inteiros de entrada 
-									       descritos anteriormente;
+<NOME_DA_MÁQUINA>                    : é o nome da máquina;
+
+<OUTREG_1>,<OUTREG_2>,...,<OUTREG_N> : é a declaração dos registradores de saída;
+
+<-                                   : seta que determina o significado dos 
+				       registradores (será tratada a seguir);
+
+<INREG_1>,<INREG_2>,...,<INREG_N>    : é a declaração dos registradores de entrada. 
+				       É esta lista de registradores que receberá os
+				       valores numéricos inteiros de entrada 
+				       descritos anteriormente;
 ```
 
 A seta descrita acima (`<-`), pode ser invertida, ou seja, escrita como "->". Todavia, a ordem dos registradores 
