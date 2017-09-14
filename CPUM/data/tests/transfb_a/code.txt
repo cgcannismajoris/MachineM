@@ -1,0 +1,4 @@
+M:b<-a
+r1: se zero a entao r10 senao r2
+r2: faca dec a va_para r3
+r3: faca inc b va_para r1
